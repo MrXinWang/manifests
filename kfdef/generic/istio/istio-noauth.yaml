@@ -14149,7 +14149,8 @@ data:
       initContainers:
       [[ if ne (annotation .ObjectMeta `sidecar.istio.io/interceptionMode` .ProxyConfig.InterceptionMode) "NONE" ]]
       - name: istio-init
-        image: "docker.io/istio/proxy_init:1.1.6"
+        #image: "docker.io/istio/proxy_init:1.1.6"
+        image: "docker.io/mrxinwang/istio-proxy_init:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
         args:
         - "-p"
         - [[ .MeshConfig.ProxyListenPort ]]
@@ -14187,7 +14188,8 @@ data:
       [[ end -]]
       containers:
       - name: istio-proxy
-        image: [[ annotation .ObjectMeta `sidecar.istio.io/proxyImage`  "docker.io/istio/proxyv2:1.1.6"  ]]
+        #image: [[ annotation .ObjectMeta `sidecar.istio.io/proxyImage`  "docker.io/istio/proxyv2:1.1.6"  ]]
+        image: [[ annotation .ObjectMeta `sidecar.istio.io/proxyImage`  "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"  ]]
         ports:
         - containerPort: 15090
           protocol: TCP
@@ -14458,7 +14460,8 @@ spec:
       serviceAccountName: istio-grafana-post-install-account
       containers:
         - name: kubectl
-          image: "docker.io/istio/kubectl:1.1.6"
+          #image: "docker.io/istio/kubectl:1.1.6"
+          image: "docker.io/mrxinwang/istio-kubectl:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
           command: [ "/bin/bash", "/tmp/grafana/run.sh", "/tmp/grafana/custom-resources.yaml" ]
           volumeMounts:
             - mountPath: "/tmp/grafana"
@@ -14648,7 +14651,8 @@ spec:
       serviceAccountName: istio-cleanup-secrets-service-account
       containers:
         - name: kubectl
-          image: "docker.io/istio/kubectl:1.1.6"
+          #image: "docker.io/istio/kubectl:1.1.6"
+          image: "docker.io/mrxinwang/istio-kubectl:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
           imagePullPolicy: IfNotPresent
           command:
           - /bin/bash
@@ -14775,7 +14779,8 @@ spec:
       serviceAccountName: istio-security-post-install-account
       containers:
         - name: kubectl
-          image: "docker.io/istio/kubectl:1.1.6"
+          #image: "docker.io/istio/kubectl:1.1.6"
+          image: "docker.io/mrxinwang/istio-kubectl:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
           imagePullPolicy: IfNotPresent
           command: [ "/bin/bash", "/tmp/security/run.sh", "/tmp/security/custom-resources.yaml" ]
           volumeMounts:
@@ -15894,7 +15899,8 @@ spec:
       serviceAccountName: istio-galley-service-account
       containers:
         - name: galley
-          image: "docker.io/istio/galley:1.1.6"
+          #image: "docker.io/istio/galley:1.1.6"
+          image: "docker.io/mrxinwang/istio-galley:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
           imagePullPolicy: IfNotPresent
           ports:
           - containerPort: 443
@@ -16019,7 +16025,8 @@ spec:
       serviceAccountName: istio-egressgateway-service-account
       containers:
         - name: istio-proxy
-          image: "docker.io/istio/proxyv2:1.1.6"
+          #image: "docker.io/istio/proxyv2:1.1.6"
+          image: "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
@@ -16185,7 +16192,8 @@ spec:
       serviceAccountName: istio-ingressgateway-service-account
       containers:
         - name: istio-proxy
-          image: "docker.io/istio/proxyv2:1.1.6"
+          #image: "docker.io/istio/proxyv2:1.1.6"
+          image: "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 15020
@@ -16515,7 +16523,8 @@ spec:
     spec:
       serviceAccountName: kiali-service-account
       containers:
-      - image: "docker.io/kiali/kiali:v0.16"
+              #- image: "docker.io/kiali/kiali:v0.16"
+      - image: "docker.io/mrxinwang/kiali:1.17.0-arm"
         name: kiali
         command:
         - "/opt/kiali/kiali"
@@ -16665,7 +16674,8 @@ spec:
                 - s390x      
       containers:
       - name: mixer
-        image: "docker.io/istio/mixer:1.1.6"
+        #image: "docker.io/istio/mixer:1.1.6"
+        image: "docker.io/mrxinwang/istio-mixer:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 15014
@@ -16705,7 +16715,8 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 5
       - name: istio-proxy
-        image: "docker.io/istio/proxyv2:1.1.6"
+        #image: "docker.io/istio/proxyv2:1.1.6"
+        image: "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9091
@@ -16837,7 +16848,8 @@ spec:
                 - s390x      
       containers:
       - name: mixer
-        image: "docker.io/istio/mixer:1.1.6"
+        #image: "docker.io/istio/mixer:1.1.6"
+        image: "docker.io/mrxinwang/istio-mixer:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 15014
@@ -16884,7 +16896,8 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 5
       - name: istio-proxy
-        image: "docker.io/istio/proxyv2:1.1.6"
+        #image: "docker.io/istio/proxyv2:1.1.6"
+        image: "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9091
@@ -16973,7 +16986,8 @@ spec:
       serviceAccountName: istio-pilot-service-account
       containers:
         - name: discovery
-          image: "docker.io/istio/pilot:1.1.6"
+          #image: "docker.io/istio/pilot:1.1.6"
+          image: "docker.io/mrxinwang/istio-pilot:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
           imagePullPolicy: IfNotPresent
           args:
           - "discovery"
@@ -17029,7 +17043,8 @@ spec:
             mountPath: /etc/certs
             readOnly: true
         - name: istio-proxy
-          image: "docker.io/istio/proxyv2:1.1.6"
+          #image: "docker.io/istio/proxyv2:1.1.6"
+          image: "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
           imagePullPolicy: IfNotPresent
           ports:
           - containerPort: 15003
@@ -17147,7 +17162,8 @@ spec:
       serviceAccountName: prometheus
       containers:
         - name: prometheus
-          image: "docker.io/prom/prometheus:v2.3.1"
+          #image: "docker.io/prom/prometheus:v2.3.1"
+          image: "docker.io/prom/prometheus:v2.10.0"
           imagePullPolicy: IfNotPresent
           args:
             - '--storage.tsdb.retention=6h'
@@ -17248,7 +17264,8 @@ spec:
       serviceAccountName: istio-citadel-service-account
       containers:
         - name: citadel
-          image: "docker.io/istio/citadel:1.1.6"
+          #image: "docker.io/istio/citadel:1.1.6"
+          image: "docker.io/mrxinwang/istio-citadel:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
           imagePullPolicy: IfNotPresent
           args:
             - --append-dns-names=true
@@ -17335,7 +17352,8 @@ spec:
       serviceAccountName: istio-sidecar-injector-service-account
       containers:
         - name: sidecar-injector-webhook
-          image: "docker.io/istio/sidecar_injector:1.1.6"
+          #image: "docker.io/istio/sidecar_injector:1.1.6"
+          image: "docker.io/mrxinwang/istio-sidecar_injector:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
           imagePullPolicy: IfNotPresent
           args:
             - --caCertFile=/etc/istio/certs/root-cert.pem
@@ -17454,7 +17472,8 @@ spec:
     spec:
       containers:
         - name: jaeger
-          image: "docker.io/jaegertracing/all-in-one:1.9"
+          #image: "docker.io/jaegertracing/all-in-one:1.9"
+          image: "docker.io/mrxinwang/jaegertracing-all-in-one:1.17.1-arm"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9411
