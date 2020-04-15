@@ -14,9 +14,9 @@ configMapGenerator:
 generatorOptions:
   disableNameSuffixHash: true
 images:
-- name: gcr.io/kubeflow-images-public/kubernetes-sigs/application
-  newName: gcr.io/kubeflow-images-public/kubernetes-sigs/application
-  newTag: 1.0-beta
+- name: docker.io/mrxinwang/kubernetes-sigs-application
+  newName: docker.io/mrxinwang/kubernetes-sigs-application
+  newTag: latest
 vars:
 - name: project
   objref:
