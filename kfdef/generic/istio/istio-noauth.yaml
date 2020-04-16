@@ -14150,7 +14150,7 @@ data:
       [[ if ne (annotation .ObjectMeta `sidecar.istio.io/interceptionMode` .ProxyConfig.InterceptionMode) "NONE" ]]
       - name: istio-init
         #image: "docker.io/istio/proxy_init:1.1.6"
-        image: "docker.io/mrxinwang/istio-proxy_init:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+        image: "docker.io/mrxinwang/istio-proxy_init:1.1.6"
         args:
         - "-p"
         - [[ .MeshConfig.ProxyListenPort ]]
@@ -14189,7 +14189,7 @@ data:
       containers:
       - name: istio-proxy
         #image: [[ annotation .ObjectMeta `sidecar.istio.io/proxyImage`  "docker.io/istio/proxyv2:1.1.6"  ]]
-        image: [[ annotation .ObjectMeta `sidecar.istio.io/proxyImage`  "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"  ]]
+        image: [[ annotation .ObjectMeta `sidecar.istio.io/proxyImage`  "docker.io/mrxinwang/istio-proxyv2:1.1.6"  ]]
         ports:
         - containerPort: 15090
           protocol: TCP
@@ -14461,7 +14461,7 @@ spec:
       containers:
         - name: kubectl
           #image: "docker.io/istio/kubectl:1.1.6"
-          image: "docker.io/mrxinwang/istio-kubectl:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+          image: "docker.io/mrxinwang/istio-kubectl:1.1.6"
           command: [ "/bin/bash", "/tmp/grafana/run.sh", "/tmp/grafana/custom-resources.yaml" ]
           volumeMounts:
             - mountPath: "/tmp/grafana"
@@ -14660,7 +14660,7 @@ spec:
       containers:
         - name: kubectl
           #image: "docker.io/istio/kubectl:1.1.6"
-          image: "docker.io/mrxinwang/istio-kubectl:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+          image: "docker.io/mrxinwang/istio-kubectl:1.1.6"
           imagePullPolicy: IfNotPresent
           command:
           - /bin/bash
@@ -14796,7 +14796,7 @@ spec:
       containers:
         - name: kubectl
           #image: "docker.io/istio/kubectl:1.1.6"
-          image: "docker.io/mrxinwang/istio-kubectl:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+          image: "docker.io/mrxinwang/istio-kubectl:1.1.6"
           imagePullPolicy: IfNotPresent
           command: [ "/bin/bash", "/tmp/security/run.sh", "/tmp/security/custom-resources.yaml" ]
           volumeMounts:
@@ -15924,7 +15924,7 @@ spec:
       containers:
         - name: galley
           #image: "docker.io/istio/galley:1.1.6"
-          image: "docker.io/mrxinwang/istio-galley:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+          image: "docker.io/mrxinwang/istio-galley:1.1.6"
           imagePullPolicy: IfNotPresent
           ports:
           - containerPort: 443
@@ -16058,7 +16058,7 @@ spec:
       containers:
         - name: istio-proxy
           #image: "docker.io/istio/proxyv2:1.1.6"
-          image: "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+          image: "docker.io/mrxinwang/istio-proxyv2:1.1.6"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
@@ -16233,7 +16233,7 @@ spec:
       containers:
         - name: istio-proxy
           #image: "docker.io/istio/proxyv2:1.1.6"
-          image: "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+          image: "docker.io/mrxinwang/istio-proxyv2:1.1.6"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 15020
@@ -16747,7 +16747,7 @@ spec:
       containers:
       - name: mixer
         #image: "docker.io/istio/mixer:1.1.6"
-        image: "docker.io/mrxinwang/istio-mixer:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+        image: "docker.io/mrxinwang/istio-mixer:1.1.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 15014
@@ -16788,7 +16788,7 @@ spec:
           periodSeconds: 5
       - name: istio-proxy
         #image: "docker.io/istio/proxyv2:1.1.6"
-        image: "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+        image: "docker.io/mrxinwang/istio-proxyv2:1.1.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9091
@@ -16929,7 +16929,7 @@ spec:
       containers:
       - name: mixer
         #image: "docker.io/istio/mixer:1.1.6"
-        image: "docker.io/mrxinwang/istio-mixer:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+        image: "docker.io/mrxinwang/istio-mixer:1.1.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 15014
@@ -16977,7 +16977,7 @@ spec:
           periodSeconds: 5
       - name: istio-proxy
         #image: "docker.io/istio/proxyv2:1.1.6"
-        image: "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+        image: "docker.io/mrxinwang/istio-proxyv2:1.1.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9091
@@ -17067,7 +17067,7 @@ spec:
       containers:
         - name: discovery
           #image: "docker.io/istio/pilot:1.1.6"
-          image: "docker.io/mrxinwang/istio-pilot:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+          image: "docker.io/mrxinwang/istio-pilot:1.1.6"
           imagePullPolicy: IfNotPresent
           args:
           - "discovery"
@@ -17124,7 +17124,7 @@ spec:
             readOnly: true
         - name: istio-proxy
           #image: "docker.io/istio/proxyv2:1.1.6"
-          image: "docker.io/mrxinwang/istio-proxyv2:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+          image: "docker.io/mrxinwang/istio-proxyv2:1.1.6"
           imagePullPolicy: IfNotPresent
           ports:
           - containerPort: 15003
@@ -17361,7 +17361,7 @@ spec:
       containers:
         - name: citadel
           #image: "docker.io/istio/citadel:1.1.6"
-          image: "docker.io/mrxinwang/istio-citadel:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+          image: "docker.io/mrxinwang/istio-citadel:1.1.6"
           imagePullPolicy: IfNotPresent
           args:
             - --append-dns-names=true
@@ -17457,7 +17457,7 @@ spec:
       containers:
         - name: sidecar-injector-webhook
           #image: "docker.io/istio/sidecar_injector:1.1.6"
-          image: "docker.io/mrxinwang/istio-sidecar_injector:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
+          image: "docker.io/mrxinwang/istio-sidecar_injector:1.1.6"
           imagePullPolicy: IfNotPresent
           args:
             - --caCertFile=/etc/istio/certs/root-cert.pem
