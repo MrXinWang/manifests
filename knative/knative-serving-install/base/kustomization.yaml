@@ -21,19 +21,19 @@ commonLabels:
 images:
 - name: docker.io/mrxinwang/activator-ecd51ca5034883acbe737fde417a3d86
   newName: docker.io/mrxinwang/activator-ecd51ca5034883acbe737fde417a3d86
-  newTag: v0.13.2 
+  newTag: latest 
 - name: docker.io/mrxinwang/autoscaler-hpa-85c0b68178743d74ff7f663a72802ceb
   newName: docker.io/mrxinwang/autoscaler-hpa-85c0b68178743d74ff7f663a72802ceb
-  newTag: v0.13.2 
+  newTag: latest 
 - name: docker.io/mrxinwang/autoscaler-12c0fa24db31956a7cfa673210e4fa13
   newName: docker.io/mrxinwang/autoscaler-12c0fa24db31956a7cfa673210e4fa13
-  newTag: v0.13.2 
+  newTag: latest 
 - name: docker.io/mrxinwang/istio-c58c0c8bb8ecc80f800bb788a425ae1d
   newName: docker.io/mrxinwang/istio-c58c0c8bb8ecc80f800bb788a425ae1d
-  newTag: v0.13.2 
+  newTag: latest 
 - name: docker.io/mrxinwang/webhook-261c6506fca17bc41be50b3461f98f1c
   newName: docker.io/mrxinwang/webhook-261c6506fca17bc41be50b3461f98f1c
-  newTag: v0.13.2 
+  newTag: latest 
 - name: docker.io/mrxinwang/controller-f6fdb41c6acbc726e29a3104ff2ef720
   newName: docker.io/mrxinwang/controller-f6fdb41c6acbc726e29a3104ff2ef720
-  newTag: v0.13.2 
+  newTag: latest 
