@@ -15500,7 +15500,7 @@ spec:
       containers:
         - name: discovery
           #image: "docker.io/istio/pilot:1.1.6"
-          image: "docker.io/mrxinwang/istio-pilot:1.1.6"
+          image: "docker.io/mrxinwang/istio-pilot:86deb8bdd0e4c8fce367baabce1789fed3111ed4"
           imagePullPolicy: IfNotPresent
           args:
           - "discovery"
