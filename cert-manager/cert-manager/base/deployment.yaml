@@ -18,7 +18,7 @@ spec:
       serviceAccountName: cert-manager-cainjector
       containers:
         - name: cainjector
-          image: "quay.io/jetstack/cert-manager-cainjector:v0.14.0"
+          image: "docker.io/mrxinwang/cert-manager-cainjector-arm64:v0.11.0"
           imagePullPolicy: IfNotPresent
           args:
           - --v=2
@@ -56,7 +56,7 @@ spec:
       serviceAccountName: cert-manager
       containers:
         - name: cert-manager
-          image: "quay.io/jetstack/cert-manager-controller:v0.14.0"
+          image: "docker.io/mrxinwang/cert-manager-controller-arm64:v0.11.0"
           imagePullPolicy: IfNotPresent
           args:
           - --v=2
@@ -100,7 +100,7 @@ spec:
       serviceAccountName: cert-manager-webhook
       containers:
         - name: cert-manager
-          image: "quay.io/jetstack/cert-manager-webhook:v0.14.0"
+          image: "docker.io/mrxinwang/cert-manager-webhook-arm64:v0.11.0"
           imagePullPolicy: IfNotPresent
           args:
           - --v=2
