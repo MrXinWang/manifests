@@ -6,13 +6,13 @@ namespace: kubeflow
 images:
 - name: docker.io/mrxinwang/istio-kubectl
   newName: docker.io/mrxinwang/istio-kubectl
-  newTag: 86deb8bdd0e4c8fce367baabce1789fed3111ed4
+  newTag: 1.1.6
 - name: docker.io/mrxinwang/istio-galley
   newName: docker.io/mrxinwang/istio-galley
-  newTag: 86deb8bdd0e4c8fce367baabce1789fed3111ed4
+  newTag: 1.1.6
 - name: docker.io/mrxinwang/istio-proxyv2
   newName: docker.io/mrxinwang/istio-proxyv2
-  newTag: 86deb8bdd0e4c8fce367baabce1789fed3111ed4
+  newTag: 1.1.6
 - name: grafana/grafana
   newName: grafana/grafana
   newTag: 6.0.2
@@ -21,19 +21,19 @@ images:
   newTag: 1.17.0-arm
 - name: docker.io/mrxinwang/istio-mixer
   newName: docker.io/mrxinwang/istio-mixer
-  newTag: 86deb8bdd0e4c8fce367baabce1789fed3111ed4
+  newTag: 1.1.6
 - name: docker.io/mrxinwang/istio-pilot
   newName: docker.io/mrxinwang/istio-pilot
-  newTag: 86deb8bdd0e4c8fce367baabce1789fed3111ed4
+  newTag: 1.1.6
 - name: docker.io/prom/prometheus
   newName: docker.io/prom/prometheus
   newTag: v2.10.0
 - name: docker.io/mrxinwang/istio-citadel
   newName: docker.io/mrxinwang/istio-citadel
-  newTag: 86deb8bdd0e4c8fce367baabce1789fed3111ed4
+  newTag: 1.1.6
 - name: docker.io/mrxinwang/istio-sidecar_injector
   newName: docker.io/mrxinwang/istio-sidecar_injector
-  newTag: 86deb8bdd0e4c8fce367baabce1789fed3111ed4
+  newTag: 1.1.6
 - name: docker.io/mrxinwang/jaegertracing-all-in-one
   newName: docker.io/mrxinwang/jaegertracing-all-in-one
   newTag: 1.17.1-arm
