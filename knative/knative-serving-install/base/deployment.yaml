@@ -42,7 +42,7 @@ spec:
             - name: METRICS_DOMAIN
               value: knative.dev/internal/serving
               #image: gcr.io/knative-releases/knative.dev/serving/cmd/activator@sha256:8e606671215cc029683e8cd633ec5de9eabeaa6e9a4392ff289883304be1f418
-              image: docker.io/mrxinwang/activator-ecd51ca5034883acbe737fde417a3d86:latest
+          image: docker.io/mrxinwang/activator-ecd51ca5034883acbe737fde417a3d86:latest
           livenessProbe:
             httpGet:
               httpHeaders:
