@@ -15016,7 +15016,7 @@ spec:
       serviceAccountName: kiali-service-account
       containers:
               #- image: "docker.io/kiali/kiali:v0.16"
-      - image: "docker.io/mrxinwang/kiali:1.17.0-arm"
+      - image: "docker.io/mrxinwang/kiali:v0.16"
         name: kiali
         command:
         - "/opt/kiali/kiali"
