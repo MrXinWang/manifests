@@ -18,7 +18,7 @@ images:
   newTag: 6.0.2
 - name: docker.io/mrxinwang/kiali
   newName: docker.io/mrxinwang/kiali
-  newTag: 1.17.0-arm
+  newTag: v0.16
 - name: docker.io/mrxinwang/istio-mixer
   newName: docker.io/mrxinwang/istio-mixer
   newTag: 1.1.6
