@@ -39,7 +39,7 @@ spec:
           value: 'false'
         - name: BASE_HREF
           value: /argo/
-        image: argoproj/argoui:v2.3.0
+        image: mrxinwang/argo-ui:v2.4.0
         imagePullPolicy: IfNotPresent
         name: argo-ui
         resources: {}
@@ -96,7 +96,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: metadata.namespace
-        image: argoproj/workflow-controller:v2.3.0
+        image: mrxinwang/workflow-controller:v2.4.0
         imagePullPolicy: IfNotPresent
         name: workflow-controller
         resources: {}
