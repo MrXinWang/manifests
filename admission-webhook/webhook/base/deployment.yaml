@@ -9,7 +9,8 @@ spec:
         sidecar.istio.io/inject: "false"
     spec:
       containers:
-      - image: gcr.io/kubeflow-images-public/admission-webhook:v20190520-v0-139-gcee39dbc-dirty-0d8f4c
+              #- image: gcr.io/kubeflow-images-public/admission-webhook:v20190520-v0-139-gcee39dbc-dirty-0d8f4c
+      - image: mrxinwang/admission-webhook:latest
         name: admission-webhook
         volumeMounts:
         - mountPath: /etc/webhook/certs
