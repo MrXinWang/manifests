@@ -24,9 +24,9 @@ vars:
 configurations:
 - params.yaml
 images:
-- name: gcr.io/kubebuilder/kube-rbac-proxy
-  newName: gcr.io/kubebuilder/kube-rbac-proxy
+- name: mrxinwang/kube-rbac-proxy
+  newName: mrxinwang/kube-rbac-proxy
   newTag: v0.4.0
-- name: $(registry)/kfserving-controller
-  newName: $(registry)/kfserving-controller
+- name: mrxinwang/kfserving-controller
+  newName: mrxinwang/kfserving-controller
   newTag: 0.2.2
