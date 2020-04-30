@@ -21,18 +21,18 @@ configMapGenerator:
 generatorOptions:
   disableNameSuffixHash: true
 images:
-- name: gcr.io/kubeflow-images-public/katib/v1alpha3/katib-controller
-  newTag: v0.8.0
-  newName: gcr.io/kubeflow-images-public/katib/v1alpha3/katib-controller
-- name: gcr.io/kubeflow-images-public/katib/v1alpha3/katib-db-manager
-  newTag: v0.8.0
-  newName: gcr.io/kubeflow-images-public/katib/v1alpha3/katib-db-manager
-- name: gcr.io/kubeflow-images-public/katib/v1alpha3/katib-ui
-  newTag: v0.8.0
-  newName: gcr.io/kubeflow-images-public/katib/v1alpha3/katib-ui
-- name: mysql
-  newTag: "8"
-  newName: mysql
+- name: mrxinwang/katib-controller
+  newTag: v1.0
+  newName: mrxinwang/katib-controller
+- name: mrxinwang/katib-db-manager
+  newTag: v1.0
+  newName: mrxinwang/katib-db-manager
+- name: mrxinwang/katib-ui
+  newTag: v1.0
+  newName: mrxinwang/katib-ui
+- name: mrxinwang/mysql_arm64_updated
+  newTag: 8.0.17
+  newName: mrxinwang/mysql_arm64_updated
 vars:
 - name: clusterDomain
   objref:
