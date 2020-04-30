@@ -9,6 +9,6 @@ resources:
 commonLabels:
   kustomize.component: metacontroller
 images:
-- name: metacontroller/metacontroller
-  newName: metacontroller/metacontroller
-  newTag: v0.3.0
+- name: mrxinwang/metacontroller_arm64
+  newName: mrxinwang/metacontroller_arm64
+  newTag: 0.3.0
