@@ -22,9 +22,9 @@ commonLabels:
 patchesStrategicMerge:
 - deployment_patch.yaml
 images:
-- name: gcr.io/kubeflow-images-public/notebook-controller
-  newName: gcr.io/kubeflow-images-public/notebook-controller
-  newTag: vmaster-gf39279c0
+- name: mrxinwang/notebook-controller
+  newName: mrxinwang/notebook-controller:v1.0
+  newTag: v1.0
 configMapGenerator:
 - name: notebook-controller-config
   literals:

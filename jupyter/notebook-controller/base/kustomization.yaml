@@ -17,9 +17,9 @@ commonLabels:
   app: notebook-controller
   kustomize.component: notebook-controller
 images:
-- name: gcr.io/kubeflow-images-public/notebook-controller
-  newName: gcr.io/kubeflow-images-public/notebook-controller
-  newTag: vmaster-gf39279c0
+- name: mrxinwang/notebook-controller
+  newName: mrxinwang/notebook-controller
+  newTag: v1.0
 configMapGenerator:
 - envs:
   - params.env
