@@ -19,7 +19,7 @@ spec:
         - --port=6006
         command:
         - /usr/local/bin/tensorboard
-        image: tensorflow/tensorflow:1.8.0
+        image: mrxinwang/tensorflow:1.8.0
         imagePullPolicy: IfNotPresent
         name: tensorboard
         ports:
