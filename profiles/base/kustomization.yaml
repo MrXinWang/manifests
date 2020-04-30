@@ -19,12 +19,12 @@ configMapGenerator:
   - params.env
   name: profiles-parameters
 images:
-- name: gcr.io/kubeflow-images-public/kfam
-  newName: gcr.io/kubeflow-images-public/kfam
-  newTag: vmaster-gf3e09203
-- name: gcr.io/kubeflow-images-public/profile-controller
-  newName: gcr.io/kubeflow-images-public/profile-controller
-  newTag: vmaster-g34aa47c2
+- name: mrxinwang/kfam
+  newName: mrxinwang/kfam
+  newTag: v1.0
+- name: mrxinwang/profile-controller
+  newName: mrxinwang/profile-controller
+  newTag: v1.0
 vars:
 - fieldref:
     fieldPath: data.admin
