@@ -62,9 +62,9 @@ images:
 - name: gcr.io/ml-pipeline/envoy
   newName: gcr.io/ml-pipeline/envoy
   newTag: metadata-grpc
-- name: mysql
-  newName: mysql
-  newTag: 8.0.3
+- name: mrxinwang/mysql_arm64_updated
+  newName: mrxinwang/mysql_arm64_updated
+  newTag: 8.0.17
 - name: gcr.io/kubeflow-images-public/metadata-frontend
   newName: gcr.io/kubeflow-images-public/metadata-frontend
   newTag: v0.1.8
