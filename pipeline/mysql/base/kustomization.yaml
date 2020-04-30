@@ -20,8 +20,8 @@ vars:
   fieldref:
     fieldpath: data.mysqlPvcName
 images:
-- name: mysql
-  newTag: '5.6'
-  newName: mysql
+- name: mrxinwang/mysql_arm64_updated
+  newTag: 5.7
+  newName: mrxinwang/mysql_arm64_updated
 configurations:
 - params.yaml
