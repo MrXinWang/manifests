@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: katib-ui
-        image: gcr.io/kubeflow-images-public/katib/v1alpha3/katib-ui
+        image: mrxinwang/katib-ui:v1.0
         imagePullPolicy: IfNotPresent
         command:
           - './katib-ui'

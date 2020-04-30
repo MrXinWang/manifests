@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: katib-mysql
-        image: mysql:8
+        image: mrxinwang/mysql_arm64_updated:8.0.17
         args:
         - --datadir
         - /var/lib/mysql/datadir
