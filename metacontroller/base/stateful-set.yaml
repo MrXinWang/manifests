@@ -23,7 +23,7 @@ spec:
         - --logtostderr
         - -v=4
         - --discovery-interval=20s
-        image: metacontroller/metacontroller:v0.3.0
+        image: mrxinwang/metacontroller_arm64:0.3.0
         imagePullPolicy: Always
         name: metacontroller
         ports:
