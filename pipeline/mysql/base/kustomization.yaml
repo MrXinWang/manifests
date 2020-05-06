@@ -21,7 +21,7 @@ vars:
     fieldpath: data.mysqlPvcName
 images:
 - name: mrxinwang/mysql_arm64_updated
-  newTag: 5.7
+  newTag: '5.7'
   newName: mrxinwang/mysql_arm64_updated
 configurations:
 - params.yaml
