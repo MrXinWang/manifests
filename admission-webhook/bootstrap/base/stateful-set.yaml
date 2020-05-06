@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - command:
-        - sh
+        - bash
         - /var/webhook-config/create_ca.sh
         image: mrxinwang/ingress-setup:v1.0
         name: bootstrap
