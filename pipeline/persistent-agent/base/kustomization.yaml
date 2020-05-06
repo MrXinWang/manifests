@@ -9,6 +9,6 @@ resources:
 - deployment.yaml
 - service-account.yaml
 images:
-- name: gcr.io/ml-pipeline/persistenceagent
-  newTag: 0.2.5
-  newName: gcr.io/ml-pipeline/persistenceagent
+- name: mrxinwang/ml-pipeline-persistenceagent
+  newTag: 0.2.0
+  newName: mrxinwang/ml-pipeline-persistenceagent
