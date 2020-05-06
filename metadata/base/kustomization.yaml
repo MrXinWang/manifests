@@ -53,18 +53,18 @@ vars:
   fieldref:
     fieldpath: metadata.name
 images:
-- name: gcr.io/kubeflow-images-public/metadata
-  newName: gcr.io/kubeflow-images-public/metadata
-  newTag: v0.1.11
-- name: gcr.io/tfx-oss-public/ml_metadata_store_server
-  newName: gcr.io/tfx-oss-public/ml_metadata_store_server
+- name: mrxinwang/metadata
+  newName: mrxinwang/metadata
+  newTag: latest
+- name: mrxinwang/ml_metadata_store_server
+  newName: mrxinwang/ml_metadata_store_server
   newTag: v0.21.1
-- name: gcr.io/ml-pipeline/envoy
-  newName: gcr.io/ml-pipeline/envoy
-  newTag: metadata-grpc
+- name: mrxinwang/ml-pipeline-envoy-metadata-grpc
+  newName: mrxinwang/ml-pipeline-envoy-metadata-grpc
+  newTag: v0.2.0
 - name: mrxinwang/mysql_arm64_updated
   newName: mrxinwang/mysql_arm64_updated
   newTag: 8.0.17
-- name: gcr.io/kubeflow-images-public/metadata-frontend
-  newName: gcr.io/kubeflow-images-public/metadata-frontend
-  newTag: v0.1.8
+- name: mrxinwang/metadata-frontend
+  newName: mrxinwang/metadata-frontend
+  newTag: latest
